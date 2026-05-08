@@ -1,0 +1,13 @@
+CC      = gcc
+CFLAGS  = -Wall -Wextra -g
+TARGET  = server_2514
+SRC     = server_2514.c
+
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+	@echo "Build successful: ./$(TARGET)"
+
+clean:
+	rm -f $(TARGET) *.o
